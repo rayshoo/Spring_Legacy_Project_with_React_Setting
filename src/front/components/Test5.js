@@ -28,7 +28,7 @@ export default class Test5 extends Component {
     const { handleClick } = this;
     return (
       <div className="gallery">
-      	<h3 className="title">Hello, React~</h3>
+      	<h3 className="title">Hello, React~!</h3>
       	<br />
         {
           movies.map(movie=><Test5Child key={movie.no} movie={movie} handleClick={handleClick}/>)
