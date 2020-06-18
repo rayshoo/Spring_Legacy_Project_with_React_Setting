@@ -39,6 +39,27 @@ module.exports = {
       {
     	  test : /\.scss$/,
 		  use : [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      },
+//      {
+//    	  test: /\.svg$/,
+//    	  use: {
+//    	    loader: 'url-loader',
+//    	    options: {
+//    	      name: '[name].[ext]?[hash]',
+//    	      publicPath: path.resolve(__dirname, 'src/main/webapp/'),
+//    	      limit: 10000 // 10kb
+//    	    }
+//    	  }
+//      },
+      {
+    	  test : /\.(svg|png|jpg)$/,
+    	  use : {
+			  loader : 'file-loader',
+			  options: {
+				  //publicPath: '../src/main/webapp/',
+				  name: '[name].[ext]?[hash]'
+			  }
+		  }
       }
     ],
   },

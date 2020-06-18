@@ -39,6 +39,16 @@ module.exports = {
       {
     	  test : /\.scss$/,
 		  use : [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+      },
+      {
+    	  test : /\.(svg|png|jpg)$/,
+    	  use : {
+			  loader : 'file-loader',
+			  options: {
+				  //publicPath: '../src/main/webapp/',
+				  name: '[name].[ext]?[hash]'
+			  }
+		  }
       }
     ],
   },
