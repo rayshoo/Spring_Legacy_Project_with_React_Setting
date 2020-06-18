@@ -12,7 +12,7 @@ module.exports = {
   },
   devServer : {
 	contentBase : path.resolve(__dirname, 'src/main/webapp/'),
-	index : 'index.html',
+	index : 'main.html',
 	port : 9001
   },
   mode: 'none',
@@ -45,7 +45,7 @@ module.exports = {
   plugins: [
     new HtmlWebPackPlugin({
       template: path.resolve(__dirname, 'public/index.html'), // public/index.html 파일을 읽는다.
-      filename: path.resolve(__dirname, 'src/main/webapp/index.html') // output 으로 출력할 파일은 index.html 이다.
+      filename: path.resolve(__dirname, 'src/main/webapp/main.html') // output 으로 출력할 파일은 main.html 이다.
     }),
     new MiniCssExtractPlugin({
     	filename : 'style-test.css'

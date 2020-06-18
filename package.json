@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "webpack -w --mode development --devtool inline-source-map",
-    "start" : "webpack-dev-server --config ./config/webpack.config.dev --hot",
+    "start": "webpack-dev-server --config ./config/webpack.config.dev --hot",
     "build": "webpack --config ./config/webpack.config.prod"
   },
   "devDependencies": {
