@@ -5,7 +5,7 @@
 ```cmd
 yarn init -y
 
-yarn add -D @babel/core @babel/preset-env @babel/preset-react babel-loader clean-webpack-plugin css-loader html-loader html-webpack-plugin mini-css-extract-plugin node-sass react react-dom sass-loader style-loader webpack webpack-cli webpack-dev-server file-loader url-loader
+yarn add -D @babel/core @babel/preset-env @babel/preset-react babel-loader css-loader html-loader html-webpack-plugin mini-css-extract-plugin node-sass react react-dom sass-loader style-loader webpack webpack-cli webpack-dev-server file-loader url-loader remove-files-webpack-plugin
 ```
 
 ```txt

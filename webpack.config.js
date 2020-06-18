@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 //const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const RemovePlugin = require('remove-files-webpack-plugin');
 
 
 module.exports = {
@@ -72,5 +73,19 @@ module.exports = {
     	filename : 'style-test.css'
     }),
 //    new CleanWebpackPlugin()
+    new RemovePlugin({
+        before: {
+          test: [
+            {
+              folder: path.resolve(__dirname, '../src/main/webapp/'),
+              method: () => true
+            }
+          ],
+          exclude: [
+        	  path.resolve(__dirname, '../src/main/webapp/resources'),
+        	  path.resolve(__dirname, '../src/main/webapp/WEB-INF')
+          ]
+        }
+    })
   ],
 };
